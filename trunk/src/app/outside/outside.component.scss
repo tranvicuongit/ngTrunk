@@ -1,0 +1,82 @@
+@import '../../assets/scss/main';
+
+body {
+  background-color: $main-grey;
+}
+.logo-default {
+  margin: 10px 0 0 0;
+  width: 25px;
+}
+.logo-text {
+  color: $color-white;
+  font-size: 1.2em;
+  margin: 10px 0 0 10px;
+  float: right;
+}
+
+mat-sidenav{
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  &.navbar {
+    background: $main-bg;
+    color: $color-white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+
+    .menu-toggler > span,
+    .menu-toggler > span:before,
+    .menu-toggler > span:after {
+      background: #ffffff !important;
+    }
+  }
+  .page-header-inner {
+    .page-logo {
+      a {
+        &:hover {
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+}
+.page-sidebar-closed {
+  .logo-default,
+  .logo-text {
+    display: none;
+  }
+  .menu-toggler {
+    &.sidebar-toggler {
+      float: left !important;
+      padding-left: 15px;
+    }
+  }
+}
+
+.page-header.navbar .menu-toggler > span,
+.page-header.navbar .menu-toggler > span:before,
+.page-header.navbar .menu-toggler > span:after {
+  background: #ffffff !important;
+}
+
+.menu-toggler {
+  &.sidebar-toggler {
+    float: left !important;
+    padding-right: 10px;
+
+    transition: all 1s ease;
+  }
+}
+
+.app-sidenav{
+  width: 232px;
+  //padding: 12px 8px 52px;
+  background-color: $main-grey;
+}
+.app-content{
+  min-height: calc(100vh - 64px);
+}
+.mat-drawer-container{
+  background-color: $color-white;
+}

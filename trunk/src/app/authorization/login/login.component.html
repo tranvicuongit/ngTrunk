@@ -1,0 +1,51 @@
+<div class="logo">
+  <a href="javascript:void(0)">
+    <img src="./assets/img/logo-blue.png" alt="Login" />
+  </a>
+</div>
+<div class="content" id="m_login">
+  <form class="login-form" (ngSubmit)="f.form.valid && signin()" #f="ngForm" action="">
+    <h3 class="form-title">{{ "SIGNIN.sign-in-title" | translate:param }}</h3>
+
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput [placeholder]="'SIGNIN.username' | translate" name="username" [(ngModel)]="model.username">
+        <button mat-button *ngIf="model.username" matSuffix mat-icon-button aria-label="Xóa" (click)="model.username=''">
+          <mat-icon style="color: #fff">close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" autocomplete="off" [placeholder]="'SIGNIN.password' | translate" name="password" [(ngModel)]="model.password"
+        />
+        <button mat-button *ngIf="model.password" matSuffix mat-icon-button aria-label="Xóa" (click)="model.password=''">
+          <mat-icon style="color: #fff">close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="form-actions" style="text-align: center">
+      <button type="submit" [disabled]="lblError === '' && loading" class="btn-login" mat-raised-button id="m_login_signin_submit">
+        {{ "SIGNIN.sign-in-button" | translate }}
+      </button>
+      <p class="error-message" *ngIf="lblError !== ''">{{lblError}}</p>
+      <p *ngIf="lblError === '' && loading">
+          <mat-spinner style="margin: auto" class="error-message" [diameter]="30" [color]="'primary'" [strokeWidth]="4" [mode]="'Indeterminate'"></mat-spinner>
+      </p>
+      <div class="form-actions-add">
+        <p>
+          <a mat-button href="javascript:void(0);">{{ "SIGNIN.forget-pass" | translate }}</a>
+        </p>
+        <p>
+          <span>{{ "SIGNIN.not-have-acc" | translate }}</span>
+          <a mat-button href="javascript:void(0);">{{ "SIGNIN.sign-up" | translate }}</a>
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="copyright text-center">
+  <p>2018 © eDoctor</p>
+  <p>
+    <app-locale></app-locale>
+  </p>
+</div>

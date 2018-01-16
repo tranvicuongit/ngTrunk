@@ -1,0 +1,13 @@
+{
+  "please-wait": "Please wait...",
+  "SIGNIN": {
+    "sign-in-title": "Sign in",
+    "remember-me": "Remember me",
+    "sign-in-button": "Sign in",
+    "forget-pass": "Forget password",
+    "sign-up": "Register",
+    "not-have-acc": "Don't have account?",
+    "username": "Username",
+    "password": "Password"
+  }
+}

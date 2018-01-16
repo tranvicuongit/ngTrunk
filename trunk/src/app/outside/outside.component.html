@@ -1,0 +1,9 @@
+<app-header-nav></app-header-nav>
+<mat-sidenav-container>
+    <mat-sidenav #mainNav mode="side" opened="true" class="app-sidenav">
+        <app-aside-nav></app-aside-nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="app-content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
