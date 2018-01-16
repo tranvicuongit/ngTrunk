@@ -17,10 +17,15 @@
     </ul>
   </div>
 </div>
+<div class="app-side__menu">
+  <h4>Phòng khám</h4>
+  <mat-nav-list class="app-side__menu--list">
+    <a href="javascript:void(0);" mat-list-item routerLink="/phong-kham/benh-nhan-cua-toi">Bệnh nhân của tôi</a>
+    <a href="javascript:void(0);" mat-list-item routerLink="/phong-kham/cau-hoi">Câu hỏi</a>
+    <a href="javascript:void(0);" mat-list-item routerLink="/list-patient">Notfound</a>
+  </mat-nav-list>
 
-<mat-nav-list class="app-sidenav__content--list">
-  <a href="javascript:void(0);" mat-list-item routerLink="/">Home</a>
-  <a href="javascript:void(0);" mat-list-item routerLink="/404">Notfound</a>
-  <a href="javascript:void(0);" mat-list-item routerLink="/list-patient">Notfound</a>
-  <a href="javascript:void(0);" mat-list-item routerLink="/auth/logout">Thoát</a>
-</mat-nav-list>
+  <mat-nav-list class="app-side__menu--list">
+    <a href="javascript:void(0);" mat-list-item routerLink="/auth/logout">Thoát</a>
+  </mat-nav-list>
+</div>
